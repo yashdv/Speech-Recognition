@@ -18,7 +18,7 @@ for i=1:n                       % train a VQ codebook for each speaker
     file = sprintf('%ss%d.wav', traindir, i);           
     disp(file);
    
-    [s, fs] = wavread(file);
+    [s, fs] = audioread(file);
     
     v = mfcc(s, fs);            % Compute MFCC's
    
