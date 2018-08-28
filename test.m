@@ -15,7 +15,7 @@ function test(testdir, n, code)
 
 for k=1:n                       % read test sound file of each speaker
     file = sprintf('%ss%d.wav', testdir, k);
-    [s, fs] = wavread(file);      
+    [s, fs] = audioread(file);      
         
     v = mfcc(s, fs);            % Compute MFCC's
    
